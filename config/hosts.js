@@ -21,7 +21,31 @@ module.exports =
 				}
 			]
 		} ,
-
+    	{
+			name:'Britannia Pool League',
+			host: 'britannia-pool.net',
+			port:80,
+			ping_service_name: 'http',
+			timeout:5000,
+			ping_interval: one_tick,
+			failed_ping_interval: one_tick / 3,
+			warning_if_takes_more_than: 1500, //miliseconds
+			enabled: true,
+			services : [
+				{
+					name: 'home',
+					method: 'get',
+					url : '/',
+					expected: {statuscode: 200, contains: 'League'}
+//				},
+//				{
+//					name: 'english version',
+//					method: 'get',
+//					url : '/en',
+//					expected: {statuscode: 200, contains: 'Freelance'}
+				}
+			]
+		} ,
 		{
 			name:'Apple HTTPS',
 			host: 'www.apple.com',
