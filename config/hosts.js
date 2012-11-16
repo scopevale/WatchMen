@@ -44,7 +44,7 @@ module.exports =
 					name: 'home',
 					method: 'get',
 					url : '/',
-					expected: {statuscode: 200, contains: 'scopevale'}
+					expected: {statuscode: 301, contains: 'scopevale'}
 //				},
 //				{
 //					name: 'english version',
@@ -69,7 +69,7 @@ module.exports =
 					name: 'home',
 					method: 'get',
 					url : '/',
-					expected: {statuscode: 200, contains: 'maximus'}
+					expected: {statuscode: 200, contains: 'MAXIMUS'}
 //				},
 //				{
 //					name: 'english version',
