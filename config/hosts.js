@@ -31,7 +31,7 @@ module.exports =
 		} ,
         {
             name:'SAM UK Live',
-			host: 'uk.workplaceonline.com/a/',
+			host: 'uk.workplaceonline.com',
 			port:443,
 			ping_service_name: 'http',
 			timeout:5000,
@@ -43,7 +43,7 @@ module.exports =
 				{
 					name: 'home',
 					method: 'get',
-					url : '/',
+					url : '/a/',
 					expected: {statuscode: 200, contains: 'WorkPlace '}
 //				},
 //				{
@@ -56,7 +56,7 @@ module.exports =
 		} ,
         {
             name:'SAM US Beta',
-			HOST: 'https://us.workplaceonline.com/beta2/',
+			HOST: 'https://us.workplaceonline.com',
 			port:443,
 			ping_service_name: 'http',
 			timeout:5000,
@@ -68,7 +68,7 @@ module.exports =
 				{
 					name: 'home',
 					method: 'get',
-					url : '/',
+					url : '/beta2/',
 					expected: {statuscode: 200, contains: 'WorkPlace '}
 //				},
 //				{
