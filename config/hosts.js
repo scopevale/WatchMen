@@ -5,7 +5,82 @@ var one_tick = 20; //seconds
 module.exports =
 	[
         {
-			name:'Britannia Pool League',
+			name:'Workplace Online',
+			host: 'www.workplacesystems.com',
+			port:80,
+			ping_service_name: 'http',
+			timeout:1000,
+			ping_interval: one_tick,
+			failed_ping_interval: one_tick / 3,
+			warning_if_takes_more_than: 1500, //miliseconds
+			enabled: true,
+			services : [
+				{
+					name: 'home',
+					method: 'get',
+					url : '/',
+					expected: {statuscode: 200, contains: 'Workplace'}
+//				},
+//				{
+//					name: 'english version',
+//					method: 'get',
+//					url : '/en',
+//					expected: {statuscode: 200, contains: 'Freelance'}
+				}
+			]
+		} ,
+        {
+    		name:'SAM UK Live',
+			host: 'https://uk.workplaceonline.com/a/',
+			port:80,
+			ping_service_name: 'https',
+			timeout:5000,
+			ping_interval: one_tick,
+			failed_ping_interval: one_tick / 3,
+			warning_if_takes_more_than: 1500, //miliseconds
+			enabled: true,
+			services : [
+				{
+					name: 'home',
+					method: 'get',
+					url : '/',
+					expected: {statuscode: 200, contains: 'WorkPlace '}
+//				},
+//				{
+//					name: 'english version',
+//					method: 'get',
+//					url : '/en',
+//					expected: {statuscode: 200, contains: 'Freelance'}
+				}
+			]
+		} ,
+        {
+        	name:'SAM US Beta',
+			host: 'us.workplaceonline.com/beta2/',
+			port:80,
+			ping_service_name: 'https',
+			timeout:5000,
+			ping_interval: one_tick,
+			failed_ping_interval: one_tick / 3,
+			warning_if_takes_more_than: 1500, //miliseconds
+			enabled: true,
+			services : [
+				{
+					name: 'home',
+					method: 'get',
+					url : '/',
+					expected: {statuscode: 200, contains: 'WorkPlace '}
+//				},
+//				{
+//					name: 'english version',
+//					method: 'get',
+//					url : '/en',
+//					expected: {statuscode: 200, contains: 'Freelance'}
+				}
+			]
+		} ,
+        {
+    		name:'Britannia Pool League',
 			host: 'britannia-pool.net',
 			port:80,
 			ping_service_name: 'http',
