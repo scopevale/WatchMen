@@ -31,13 +31,13 @@ module.exports =
 		} ,
         {
             name:'SAM UK Live',
-			host: 'https://uk.workplaceonline.com/a/',
-			port:80,
+			host: 'uk.workplaceonline.com/a/',
+			port:443,
 			ping_service_name: 'http',
 			timeout:5000,
 			ping_interval: one_tick,
 			failed_ping_interval: one_tick / 3,
-			warning_if_takes_more_than: 1500, //miliseconds
+			WARNING_IF_TAKES_MORE_THAN: 1500, //miliseconds
 			enabled: true,
 			services : [
 				{
@@ -56,8 +56,8 @@ module.exports =
 		} ,
         {
             name:'SAM US Beta',
-			host: 'https://us.workplaceonline.com/beta2/',
-			port:80,
+			HOST: 'https://us.workplaceonline.com/beta2/',
+			port:443,
 			ping_service_name: 'http',
 			timeout:5000,
 			ping_interval: one_tick,
@@ -119,7 +119,7 @@ module.exports =
 					name: 'home',
 					method: 'get',
 					url : '/',
-					expected: {statuscode: 301, contains: 'scopevale'}
+					expected: {statuscode: 200, contains: 'scopevale'}
 //				},
 //				{
 //					name: 'english version',
@@ -144,7 +144,7 @@ module.exports =
 					name: 'home',
 					method: 'get',
 					url : '/',
-					expected: {statuscode: 200, contains: 'MAXIMUS'}
+					expected: {statuscode: 200, contains: 'maximus'}
 //				},
 //				{
 //					name: 'english version',
