@@ -30,10 +30,10 @@ module.exports =
 			]
 		} ,
         {
-    		name:'SAM UK Live',
+            name:'SAM UK Live',
 			host: 'https://uk.workplaceonline.com/a/',
 			port:80,
-			ping_service_name: 'https',
+			ping_service_name: 'http',
 			timeout:5000,
 			ping_interval: one_tick,
 			failed_ping_interval: one_tick / 3,
@@ -55,10 +55,10 @@ module.exports =
 			]
 		} ,
         {
-        	name:'SAM US Beta',
-			host: 'us.workplaceonline.com/beta2/',
+            name:'SAM US Beta',
+			host: 'https://us.workplaceonline.com/beta2/',
 			port:80,
-			ping_service_name: 'https',
+			ping_service_name: 'http',
 			timeout:5000,
 			ping_interval: one_tick,
 			failed_ping_interval: one_tick / 3,
@@ -80,7 +80,7 @@ module.exports =
 			]
 		} ,
         {
-    		name:'Britannia Pool League',
+            name:'Britannia Pool League',
 			host: 'britannia-pool.net',
 			port:80,
 			ping_service_name: 'http',
