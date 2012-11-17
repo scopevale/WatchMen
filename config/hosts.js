@@ -33,6 +33,7 @@ module.exports =
             name:'SAM UK Live',
 			host: 'uk.workplaceonline.com',
 			port:443,
+            protocol: 'https',
 			ping_service_name: 'http',
 			timeout:5000,
 			ping_interval: one_tick,
@@ -56,8 +57,9 @@ module.exports =
 		} ,
         {
             name:'SAM US Beta',
-			HOST: 'https://us.workplaceonline.com',
+			HOST: 'us.workplaceonline.com',
 			port:443,
+            protocol: 'https',
 			ping_service_name: 'http',
 			timeout:5000,
 			ping_interval: one_tick,
